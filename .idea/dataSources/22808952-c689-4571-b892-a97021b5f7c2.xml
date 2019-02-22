@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="test@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.9">
+    <root id="1">
+      <ServerVersion>5.0.96</ServerVersion>
+      <DefaultCasing>lower/lower</DefaultCasing>
+    </root>
+    <schema id="2" parent="1" name="ddsql"/>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="my-table"/>
+    <schema id="5" parent="1" name="mysql"/>
+    <schema id="6" parent="1" name="new year"/>
+    <schema id="7" parent="1" name="test">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <table id="8" parent="7" name="student"/>
+    <column id="9" parent="8" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="10" parent="8" name="name">
+      <Position>2</Position>
+      <DataType>VARCHAR(55)|12s</DataType>
+    </column>
+    <column id="11" parent="8" name="gender">
+      <Position>3</Position>
+      <DataType>VARCHAR(10)|12s</DataType>
+    </column>
+    <index id="12" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="13" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

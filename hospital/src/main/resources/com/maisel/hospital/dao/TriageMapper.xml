@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.maisel.hospital.dao.TriageDao">
+
+    <select id="getByPage" resultType="com.maisel.hospital.entity.dto.TriageAndDeptDTO">
+        select *
+        from t_department department
+                 left join (select did, count(did) count from t_triage where status = 0
+                                                                         and isDelete = 0 group by did) triage
+                     on department.id = triage.did
+        where department.isDelete = 0
+        limit #{start},#{end}
+    </select>
+
+    <select id="getByCount" resultType="int">
+        select count(id)
+        from t_department department
+                 left join (select did, count(did) count from t_triage where status = 0
+                                                                         and isDelete = 0 group by did) triage
+                     on department.id = triage.did
+    </select>
+
+    <select id="getByDid" resultType="com.maisel.hospital.entity.dto.TriageAndPatientDTO">
+        select triage.id id, patient.name name, patient.sex sex, patient.birth birth, triage.status status
+        from t_triage triage
+                 left join t_patient patient on triage.pid = patient.id
+        where triage.did = #{did}
+          and patient.isDelete = 0
+        limit #{start},#{end}
+    </select>
+
+    <select id="getByDidCount" resultType="int">
+        select count(triage.id)
+                from t_triage triage
+                left join t_patient patient on triage.pid = patient.id
+                where triage.did = #{did}
+                and patient.isDelete = 0
+    </select>
+
+    <update id="call">
+        update t_triage
+        set status = 1
+        where id = #{id}
+    </update>
+
+    <!--<update id="update">-->
+        <!--update t_triage-->
+        <!--set status      = 2,-->
+            <!--illnessInfo = #{illnessInfo},-->
+            <!--advice      = #{advice}-->
+        <!--where id = #{id}-->
+    <!--</update>-->
+
+    <select id="getById" resultType="com.maisel.hospital.entity.dto.TriageDTO">
+        select triage.id          tid,
+               patient.id         pid,
+               patient.name       pname,
+               department.id      did,
+               department.name    dname
+        from t_triage triage
+                 left join t_patient patient on triage.pid = patient.id
+                 left join t_department department on triage.did = department.id
+        where triage.id = #{id}
+    </select>
+
+    <select id="getByPid" resultType="com.maisel.hospital.entity.dto.TriageDTO">
+        select triage.id          tid,
+               patient.id         pid,
+               patient.name       pname,
+               department.id      did,
+               department.name    dname,
+               triage.illness_info illnessInfo,
+               triage.advice      advice,
+              user2.realname uname
+        from t_triage triage
+                 left join t_patient patient on triage.pid = patient.id
+                 left join t_department department on triage.did = department.id
+                left join t_user user2 on triage.uid = user2.id
+        where triage.pid = #{id}
+    </select>
+
+</mapper>

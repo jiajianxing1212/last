@@ -1,0 +1,30 @@
+server:
+  port: 8011
+  context-path: /cmfz
+  jsp-servlet:
+    init-parameters:
+      development: true
+
+spring:
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 100MB
+
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cmfz
+    username: root
+    password: 456789
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis-plus:
+  mapper-locations: classpath:com/maisel/dao/*Mapper.xml

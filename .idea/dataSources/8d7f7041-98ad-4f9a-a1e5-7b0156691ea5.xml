@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="jdbc:mysql://localhost:3306/new year">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.9">
+    <root id="1">
+      <ServerVersion>5.0.96</ServerVersion>
+      <DefaultCasing>lower/lower</DefaultCasing>
+    </root>
+    <schema id="2" parent="1" name="cmfz"/>
+    <schema id="3" parent="1" name="ddsql"/>
+    <schema id="4" parent="1" name="information_schema"/>
+    <schema id="5" parent="1" name="my-table"/>
+    <schema id="6" parent="1" name="mysql"/>
+    <schema id="7" parent="1" name="new year">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="8" parent="1" name="test"/>
+    <table id="9" parent="7" name="t_department"/>
+    <table id="10" parent="7" name="t_drug"/>
+    <table id="11" parent="7" name="t_exam"/>
+    <table id="12" parent="7" name="t_files"/>
+    <table id="13" parent="7" name="t_log"/>
+    <table id="14" parent="7" name="t_notice"/>
+    <table id="15" parent="7" name="t_patient"/>
+    <table id="16" parent="7" name="t_rota"/>
+    <table id="17" parent="7" name="t_triage"/>
+    <table id="18" parent="7" name="t_user"/>
+    <column id="19" parent="9" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="20" parent="9" name="name">
+      <Position>2</Position>
+      <DataType>VARCHAR(50)|12s</DataType>
+    </column>
+    <column id="21" parent="9" name="telephone">
+      <Position>3</Position>
+      <DataType>VARCHAR(20)|12s</DataType>
+    </column>
+    <column id="22" parent="9" name="area">
+      <Position>4</Position>
+      <DataType>VARCHAR(20)|12s</DataType>
+    </column>
+    <column id="23" parent="9" name="status">
+      <Position>5</Position>
+      <DataType>INT(10)|4s</DataType>
+      <DefaultExpression>1</DefaultExpression>
+    </column>
+    <column id="24" parent="9" name="isDelete">
+      <Position>6</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <index id="25" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="26" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="27" parent="10" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="28" parent="10" name="name">
+      <Position>2</Position>
+      <DataType>VARCHAR(50)|12s</DataType>
+    </column>
+    <column id="29" parent="10" name="spec">
+      <Position>3</Position>
+      <DataType>VARCHAR(50)|12s</DataType>
+    </column>
+    <column id="30" parent="10" name="unit">
+      <Position>4</Position>
+      <DataType>VARCHAR(10)|12s</DataType>
+    </column>
+    <column id="31" parent="10" name="product_company">
+      <Position>5</Position>
+      <DataType>VARCHAR(50)|12s</DataType>
+    </column>
+    <column id="32" parent="10" name="product_date">
+      <Position>6</Position>
+      <DataType>DATE(10)|91s</DataType>
+    </column>
+    <column id="33" parent="10" name="ok_date">
+      <Position>7</Position>
+      <DataType>DATE(10)|91s</DataType>
+    </column>
+    <column id="34" parent="10" name="import_price">
+      <Position>8</Position>
+      <DataType>DOUBLE(10)|8s</DataType>
+    </column>
+    <column id="35" parent="10" name="price">
+      <Position>9</Position>
+      <DataType>DOUBLE(10)|8s</DataType>
+    </column>
+    <column id="36" parent="10" name="sale_status">
+      <Position>10</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="37" parent="10" name="is_import">
+      <Position>11</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="38" parent="10" name="description">
+      <Position>12</Position>
+      <DataType>VARCHAR(500)|12s</DataType>
+    </column>
+    <index id="39" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="40" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="41" parent="11" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="42" parent="11" name="exam_status">
+      <Position>2</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="43" parent="11" name="exam_advice">
+      <Position>3</Position>
+      <DataType>VARCHAR(30)|12s</DataType>
+    </column>
+    <column id="44" parent="11" name="exam_start_date">
+      <Position>4</Position>
+      <DataType>DATE(10)|91s</DataType>
+    </column>
+    <column id="45" parent="11" name="exam_end_date">
+      <Position>5</Position>
+      <DataType>DATE(10)|91s</DataType>
+    </column>
+    <column id="46" parent="11" name="d_id">
+      <Position>6</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <index id="47" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="48" parent="11" name="d_id_to_t_drug(id)">
+      <ColNames>d_id</ColNames>
+    </index>
+    <key id="49" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="50" parent="11" name="t_exam_ibfk_1">
+      <ColNames>d_id</ColNames>
+      <RefSchemaName>new year</RefSchemaName>
+      <RefTableName>t_drug</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="51" parent="12" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="52" parent="12" name="file_name">
+      <Position>2</Position>
+      <DataType>VARCHAR(50)|12s</DataType>
+    </column>
+    <column id="53" parent="12" name="file_path">
+      <Position>3</Position>
+      <DataType>VARCHAR(50)|12s</DataType>
+    </column>
+    <column id="54" parent="12" name="save_name">
+      <Position>4</Position>
+      <DataType>VARCHAR(100)|12s</DataType>
+    </column>
+    <column id="55" parent="12" name="up_time">
+      <Position>5</Position>
+      <DataType>DATE(10)|91s</DataType>
+    </column>
+    <column id="56" parent="12" name="file_size">
+      <Position>6</Position>
+      <DataType>VARCHAR(50)|12s</DataType>
+    </column>
+    <column id="57" parent="12" name="is_Delete">
+      <Position>7</Position>
+      <DataType>INT(10)|4s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <index id="58" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="59" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="60" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="61" parent="13" name="type">
+      <Position>2</Position>
+      <DataType>VARCHAR(2)|12s</DataType>
+    </column>
+    <column id="62" parent="13" name="oprater">
+      <Position>3</Position>
+      <DataType>VARCHAR(50)|12s</DataType>
+    </column>
+    <column id="63" parent="13" name="content">
+      <Position>4</Position>
+      <DataType>VARCHAR(100)|12s</DataType>
+    </column>
+    <column id="64" parent="13" name="log_date">
+      <Position>5</Position>
+      <DataType>DATE(10)|91s</DataType>
+    </column>
+    <index id="65" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="66" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="67" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="68" parent="14" name="notice_date">
+      <Position>2</Position>
+      <DataType>DATE(10)|91s</DataType>
+    </column>
+    <column id="69" parent="14" name="title">
+      <Position>3</Position>
+      <DataType>VARCHAR(30)|12s</DataType>
+    </column>
+    <column id="70" parent="14" name="content">
+      <Position>4</Position>
+      <DataType>VARCHAR(1000)|12s</DataType>
+    </column>
+    <index id="71" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="72" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="73" parent="15" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="74" parent="15" name="name">
+      <Position>2</Position>
+      <DataType>VARCHAR(20)|12s</DataType>
+    </column>
+    <column id="75" parent="15" name="sex">
+      <Position>3</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="76" parent="15" name="birth">
+      <Position>4</Position>
+      <DataType>DATE(10)|91s</DataType>
+    </column>
+    <column id="77" parent="15" name="idcard">
+      <Position>5</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="78" parent="15" name="address">
+      <Position>6</Position>
+      <DataType>VARCHAR(100)|12s</DataType>
+    </column>
+    <column id="79" parent="15" name="mobile">
+      <Position>7</Position>
+      <DataType>VARCHAR(11)|12s</DataType>
+    </column>
+    <column id="80" parent="15" name="isDelete">
+      <Position>8</Position>
+      <DataType>INT(10)|4s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <index id="81" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="82" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="83" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="84" parent="16" name="rota_date">
+      <Position>2</Position>
+      <DataType>DATE(10)|91s</DataType>
+    </column>
+    <column id="85" parent="16" name="did">
+      <Position>3</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="86" parent="16" name="uid">
+      <Position>4</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <index id="87" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="88" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="89" parent="17" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="90" parent="17" name="status">
+      <Position>2</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="91" parent="17" name="illness_info">
+      <Position>3</Position>
+      <DataType>VARCHAR(500)|12s</DataType>
+    </column>
+    <column id="92" parent="17" name="advice">
+      <Position>4</Position>
+      <DataType>VARCHAR(1000)|12s</DataType>
+    </column>
+    <column id="93" parent="17" name="pid">
+      <Position>5</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="94" parent="17" name="did">
+      <Position>6</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="95" parent="17" name="uid">
+      <Position>7</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="96" parent="17" name="isDelete">
+      <Position>8</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <index id="97" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="98" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="99" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="100" parent="18" name="username">
+      <Position>2</Position>
+      <DataType>VARCHAR(20)|12s</DataType>
+    </column>
+    <column id="101" parent="18" name="password">
+      <Position>3</Position>
+      <DataType>VARCHAR(20)|12s</DataType>
+    </column>
+    <column id="102" parent="18" name="realname">
+      <Position>4</Position>
+      <DataType>VARCHAR(20)|12s</DataType>
+    </column>
+    <column id="103" parent="18" name="sex">
+      <Position>5</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="104" parent="18" name="birth">
+      <Position>6</Position>
+      <DataType>DATE(10)|91s</DataType>
+    </column>
+    <column id="105" parent="18" name="mobile">
+      <Position>7</Position>
+      <DataType>VARCHAR(11)|12s</DataType>
+    </column>
+    <column id="106" parent="18" name="email">
+      <Position>8</Position>
+      <DataType>VARCHAR(30)|12s</DataType>
+    </column>
+    <column id="107" parent="18" name="pic">
+      <Position>9</Position>
+      <DataType>VARCHAR(100)|12s</DataType>
+    </column>
+    <column id="108" parent="18" name="dept_id">
+      <Position>10</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <index id="109" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="110" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

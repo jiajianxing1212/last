@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="demo1" />
+        <module name="hospital" />
+        <module name="maven-springboot" />
+        <module name="springbootdemo" />
+        <module name="springbootdemo1" />
+        <module name="ssm" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cmdzdemo" target="1.6" />
+      <module name="demo1" target="1.8" />
+      <module name="hospital" target="8" />
+      <module name="maven-springboot" target="1.8" />
+      <module name="springbootdemo" target="1.6" />
+      <module name="springbootdemo1" target="1.6" />
+      <module name="ssm" target="1.7" />
+      <module name="test-maven" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,76 @@
+[
+  {
+    "albumAuthor": null,
+    "albumTeller": null,
+    "albumEpisodes": null,
+    "albumDate": null,
+    "albumContent": null,
+    "albumImage": null,
+    "albumStar": null,
+    "children": [
+      {
+        "albumId": null,
+        "audioUrl": "/audio/甘露明珠/甘露明珠 02.amr",
+        "audioSize": "1.2M",
+        "audioOrder": null,
+        "id": 1,
+        "name": "甘露明珠  02"
+      },
+      {
+        "albumId": null,
+        "audioUrl": "/audio/甘露明珠/甘露明珠 03.amr",
+        "audioSize": "1.2M",
+        "audioOrder": null,
+        "id": 2,
+        "name": "甘露明珠  03"
+      },
+      {
+        "albumId": null,
+        "audioUrl": "/audio/甘露明珠/甘露明珠 01.amr",
+        "audioSize": "1.2M",
+        "audioOrder": null,
+        "id": 6,
+        "name": "甘露明珠  01"
+      }
+    ],
+    "id": 1,
+    "name": "甘露明珠"
+  },
+  {
+    "albumAuthor": null,
+    "albumTeller": null,
+    "albumEpisodes": null,
+    "albumDate": null,
+    "albumContent": null,
+    "albumImage": null,
+    "albumStar": null,
+    "children": [
+      {
+        "albumId": null,
+        "audioUrl": "/audio/米拉日巴尊者传/米拉日巴  01译者序.amr",
+        "audioSize": "1.2M",
+        "audioOrder": null,
+        "id": 3,
+        "name": "米拉日巴   01译者序"
+      },
+      {
+        "albumId": null,
+        "audioUrl": "/audio/米拉日巴尊者传/米拉日巴 02引赞.amr",
+        "audioSize": "1.2M",
+        "audioOrder": null,
+        "id": 4,
+        "name": "米拉日巴   02引赞"
+      },
+      {
+        "albumId": null,
+        "audioUrl": "/audio/米拉日巴尊者传/米拉日巴 03尊者传记之缘起.amr",
+        "audioSize": "1.2M",
+        "audioOrder": null,
+        "id": 5,
+        "name": "米拉日巴   03尊者传记之缘起"
+      }
+    ],
+    "id": 2,
+    "name": "米拉日巴尊者传"
+  }
+]

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.maisel.dao.AudioDao">
+
+    <resultMap id="album" type="com.maisel.entity.Album">
+        <id column="album_id" property="albumId"/>
+        <result column="album_Name" property="albumName"/>
+        <result column="album_author" property="albumAuthor"/>
+        <result column="album_teller" property="albumTeller"/>
+        <result column="album_episodes" property="albumEpisodes"/>
+        <result column="album_date" property="albumDate"/>
+        <result column="album_content" property="albumContent"/>
+        <result column="album_image" property="albumImage"/>
+        <result column="album_star" property="albumStar"/>
+        <result column="album_status" property="albumStatus"/>
+        <collection property="children" ofType="com.maisel.entity.Audio">
+            <id column="audio_id" property="audioId"/>
+            <result column="audio_name" property="audioName"/>
+            <result column="audio_url" property="audioUrl"/>
+            <result column="audio_size" property="audioSize"/>
+        </collection>
+    </resultMap>
+    <select id="getAll" resultMap="album">
+        select t2.audio_id,t2.audio_name,t2.audio_order,t2.audio_size,t2.audio_url,t2.album_id aid,t1.* from cmfz_album t1
+                                                                                                                 left join cmfz_audio t2
+                                                                                                                     on t1.album_id = t2.album_id
+    </select>
+    <!--<update id="falseRemove">
+        update t_department set status=0 where id in
+        <foreach collection="array" open="(" close=")" separator="," item="id">
+        #{id}
+        </foreach>
+    </update>-->
+
+
+
+    <!--<insert id="add">
+        insert into student values (00,#{name},#{gender})
+    </insert>
+
+    <select id="login" resultType="com.maisel.springbootjsp.entity.Student">
+        select * from student where name=#{name} and id=#{id}
+    </select>-->
+    <!--<delete id="mutilRemove">
+        delete from student where in <foreach collection="array" item="id" separator="," close=")" open="(">
+        #{id}
+    </foreach>
+    </delete>-->
+
+</mapper>

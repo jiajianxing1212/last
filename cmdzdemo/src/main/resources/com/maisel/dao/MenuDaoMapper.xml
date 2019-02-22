@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.maisel.dao.MenuDao">
+
+    <!--<update id="falseRemove">
+        update t_department set status=0 where id in
+        <foreach collection="array" open="(" close=")" separator="," item="id">
+        #{id}
+        </foreach>
+    </update>-->
+    <resultMap id="menu" type="com.maisel.entity.Menu">
+        <id column="id" property="menuId"/>
+        <result column="name" property="menuName"/>
+        <collection property="list" ofType="com.maisel.entity.Menu">
+            <id column="menu_Id" property="menuId"/>
+            <result column="menu_name" property="menuName"/>
+            <result column="menu_url" property="menuUrl"/>
+            <result column="menu_parent_id" property="menuParentId"/>
+        </collection>
+    </resultMap>
+    <select id="getAll" resultMap="menu">
+        select t3.*
+        from (select t1.menu_id id, t1.menu_name name, t2.*
+              from cmfz_menu t1
+              inner join cmfz_menu t2 on t1.menu_id = t2.menu_parent_id )t3;
+    </select>
+
+
+    <!--<insert id="add">
+        insert into student values (00,#{name},#{gender})
+    </insert>
+
+    <select id="login" resultType="com.maisel.springbootjsp.entity.Student">
+        select * from student where name=#{name} and id=#{id}
+    </select>-->
+    <!--<delete id="mutilRemove">
+        delete from student where in <foreach collection="array" item="id" separator="," close=")" open="(">
+        #{id}
+    </foreach>
+    </delete>-->
+
+</mapper>

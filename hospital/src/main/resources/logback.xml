@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- configuration file for LogBack (slf4J implementation)
+See here for more details: http://gordondickens.com/wordpress/2013/03/27/sawing-through-the-java-loggers/ -->
+
+
+<configuration scan="true" scanPeriod="30 seconds">
+
+    <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+        <resetJUL>true</resetJUL>
+    </contextListener>
+
+    <!-- To enable JMX Management -->
+    <jmxConfigurator/>
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <!--对日志进行格式化-->
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{0} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <!--需要查看哪个地方日志-->
+    <logger name="com.maisel.hospital.dao" level="debug"/>
+    <logger name="com.maisel.hospital.service" level="debug"/>
+    <logger name="com.maisel.hospital.controller" level="debug"/>
+    <logger name="com.maisel.hospital.interceptor" level="debug"/>
+
+
+    <root level="error">
+        <appender-ref ref="console"/>
+    </root>
+</configuration>
